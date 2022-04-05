@@ -1,0 +1,423 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+@media (min-width:1024px) {
+    .App {
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden
+    }
+
+    .App,
+    .imgarea {
+        display: flex;
+        flex-direction: column
+    }
+
+    .imgarea {
+        align-items: flex-start;
+        border-radius: 12.5px;
+        height: 150px;
+        justify-content: space-between;
+        width: 75%
+    }
+
+    .imgarea a {
+        color: #676767;
+        font-size: 14px;
+        text-decoration: none
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .App {
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden
+    }
+
+    .App,
+    .imgarea {
+        display: flex;
+        flex-direction: column
+    }
+
+    .imgarea {
+        align-items: flex-start;
+        border-radius: 12.5px;
+        height: 150px;
+        justify-content: space-between;
+        width: 75%
+    }
+
+    .imgarea a {
+        color: #676767;
+        font-size: 14px;
+        text-decoration: none
+    }
+}
+
+@media (max-width:420px) {
+    .App {
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden
+    }
+
+    .App,
+    .imgarea {
+        display: flex;
+        flex-direction: column
+    }
+
+    .imgarea {
+        align-items: flex-start;
+        border-radius: 12.5px;
+        height: 150px;
+        justify-content: space-between;
+        width: 75%
+    }
+
+    .imgarea a {
+        color: #676767;
+        font-size: 14px;
+        text-decoration: none
+    }
+}
+
+.Header {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    position: fixed;
+    transition: .3s;
+    width: 100%
+}
+
+.Header>h3 {
+    font-size: 24px;
+    margin: 10px;
+    text-align: center;
+    width: 115px
+}
+
+.Header>.menuIcon {
+    cursor: pointer;
+    height: 20px;
+    margin-right: 20px;
+    position: relative;
+    width: 20px;
+    z-index: 1
+}
+
+.show-menu {
+    align-items: center;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    z-index: 10
+}
+
+.hide-menu,
+.show-menu {
+    background-color: #fff;
+    height: 900px;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    transition: .3s
+}
+
+.hide-menu {
+    list-style-type: none;
+    overflow: hidden;
+    width: 0
+}
+
+li {
+    font-size: 16px;
+    font-weight: 500;
+    list-style: none outside;
+    margin: 10px;
+    text-align: center;
+    width: 65%
+}
+
+.loginButton {
+    background-color: #4169e1;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    margin: 5px;
+    width: 40%
+}
+
+.loginButton>a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.Content {
+    align-items: flex-start;
+    background-image: url('https://cphoto.asiae.co.kr/listimglink/1/2020030213380488882_1583123884.jpg');
+    background-repeat: none;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: flex-end;
+    width: 100%
+}
+
+.Content>.explanation {
+    padding: 20px
+}
+
+.Content>.explanation>.btnbox {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px
+}
+
+.Content>.explanation>.btnbox .innerbtnbox {
+    padding: 5px
+}
+
+.Content>.explanation>.btnbox .innerbtnbox button {
+    background-color: #000;
+    border: none;
+    border-radius: 36px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 35px;
+    width: 100px
+}
+
+.Content>.explanation>.btnbox .innerbtnbox:first-child button {
+    background-color: #fff;
+    color: #000;
+    padding: 0
+}
+
+.recommend {
+    height: auto;
+    margin-top: 5px;
+    width: 100%
+}
+
+.recommend>.travelList {
+    height: auto;
+    padding: 20px;
+    width: calc(100% - 40px)
+}
+
+.recommend>.travelList .imgarea {
+    background-image: url('http://www.ccdn.co.kr/news/photo/201909/604107_247153_0403.jpg');
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%
+}
+
+.recommend>.travelList .infotext {
+    padding: 10px
+}
+
+.recommend>.travelList .infotext>h3 {
+    margin-top: 10px;
+    width: 68%
+}
+
+.recommend>.travelList .infotext>a {
+    color: #d7d7d7
+}
+
+.priceInfo {
+    height: 260px;
+    width: 100%
+}
+
+.priceInfo>.priceList {
+    padding: 20px;
+    width: calc(100% - 40px)
+}
+
+.priceInfo .pricearea {
+    background-color: #4169e1;
+    border-radius: 12.5px;
+    box-shadow: 7px 5px 3px rgba(0, 0, 0, .2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    height: 230px;
+    margin-top: 10px;
+    width: 100%
+}
+
+.priceInfo .pricearea .toptext {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%
+}
+
+.priceInfo .pricearea .toptext>h4:last-child {
+    width: 80px
+}
+
+.productInfo {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    width: 100%
+}
+
+.reviewInfo {
+    height: auto;
+    margin-top: 20px;
+    width: 100%
+}
+
+.reviewInfo>.reviewList {
+    padding: 20px;
+    width: calc(100% - 40px)
+}
+
+.reviewInfo .reviewarea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: unset;
+    height: auto;
+    margin-top: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%
+}
+
+.reviewInfo .reviewarea::-webkit-scrollbar {
+    display: none
+}
+
+.reviewInfo .reviewarea .reviewBox {
+    border: 1px solid #000;
+    border-radius: 12.5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    height: 200px;
+    margin: 5px;
+    min-width: 152px
+}
+
+.reviewInfo .reviewarea .reviewBox:first-child {
+    margin-left: 0
+}
+
+.reviewInfo .reviewarea .reviewBox .reviewImg {
+    background-image: url('http://www.ccdn.co.kr/news/photo/201909/604107_247153_0403.jpg');
+    background-size: cover;
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+    height: 100px;
+    width: 100%
+}
+
+.reviewInfo .reviewarea .reviewBox .reviewText {
+    border-bottom-left-radius: 12.5px;
+    border-bottom-right-radius: 12.5px;
+    height: 100px;
+    padding: 5px 0 0 10px;
+    width: 100%
+}
+
+.reviewInfo .reviewarea .reviewBox .reviewText span {
+    font-size: 13px
+}
+
+.reviewInfo .reviewarea .reviewBox .reviewText p {
+    font-size: 15px
+}
+
+.textarea {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.textarea>a {
+    color: gray;
+    font-size: 12px;
+    text-decoration: none
+}
+
+.bottom {
+    background-color: #d7d7d7;
+    flex-direction: column;
+    height: 230px;
+    margin-top: 20px
+}
+
+.bottom,
+.bottom .topText {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+}
+
+.bottom .topText {
+    height: 50px
+}
+
+.bottom .centerText {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    line-height: 25px;
+    width: 95%
+}
+
+.bottom .bottomText {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.bottom .bottomText h4 {
+    margin: 5px
+}
+
+/*# sourceMappingURL=main.7111801e.css.map*/
