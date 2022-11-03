@@ -4,10 +4,6 @@ import "../css/Header.scss";
 function Header() {
   const ScrollValue = window.scrollY;
 
-  useEffect(() => {
-    console.log(ScrollValue);
-  }, [ScrollValue]);
-
   return (
     <div className="HeaderBox">
       <h2>LeeS Page</h2>

@@ -1,5 +1,6 @@
 import React from "react";
 import { TfiArrowCircleDown } from "react-icons/tfi";
+import { AiFillGithub } from "react-icons/ai"
 import "../css/MainPage.scss";
 
 function MainPage() {
@@ -12,13 +13,14 @@ function MainPage() {
 
       {/* GIt / Velog 사이트로 이동할 수 있는 버튼 div */}
       <div className="InfoButtonBox">
-        <div className="Button">
-          <h4>My Git</h4>
-        </div>
+        <a href="https://github.com/leeseongdooo/Portfolio" className="Button" target="_blank">
+          <AiFillGithub className="Icons" />
+          <h4>Git</h4>
+        </a>
 
-        <div className="Button">
-          <h4>My Velog</h4>
-        </div>
+        <a href="https://velog.io/@dltjdgns3z" className="Button" target="_blank">
+          <h4>Velog</h4>
+        </a>
       </div>
 
       <div className="IconBox">
