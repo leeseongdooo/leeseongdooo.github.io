@@ -1,0 +1,26 @@
+.HeaderBox {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  padding: 0px 40px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  .MenuBox {
+    position: absolute;
+    right: 10%;
+
+    h2 {
+      cursor: pointer;
+    }
+
+    span {
+      margin: 15px;
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom: 4px solid orange;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.MainPageBox {
+  background-color: #202024;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  // 텍스트 박스
+  .TextBox {
+    margin: 0px 0px 160px 80px;
+    span {
+      display: block;
+      font-size: 128px;
+      line-height: 120px;
+      color: transparent;
+      font-weight: bold;
+      margin-bottom: 20px;
+      -webkit-text-stroke: 2px white;
+    }
+  }
+
+  // Git / Velog 사이트로 이동할 수 있는 버튼 div
+  .InfoButtonBox {
+    position: absolute;
+    left: 80px;
+    bottom: 100px;
+    display: flex;
+
+    .Button {
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: orange;
+      padding: 10px;
+      width: 130px;
+      height: 30px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .Button:nth-child(2) {
+      background-color: rgb(53, 223, 166);
+    }
+  }
+
+  .IconBox {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    .Icon {
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+      animation: Blink 2s infinite;
+    }
+  }
+}
+
+@keyframes Blink {
+  50% {
+    opacity: 0.3;
+  }
+}
