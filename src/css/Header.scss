@@ -6,7 +6,9 @@
   align-items: center;
   justify-content: space-between;
   color: white;
-
+  background-color: #202024;
+  transition: 0.3s;
+  z-index: 99;
   .MenuBox {
     position: absolute;
     right: 10%;
