@@ -1,3 +1,20 @@
 .InformationBox {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .MyInformationArea {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 10px 0px 10px 3px rgba(0, 0, 0, 0.3);
+  }
 }
