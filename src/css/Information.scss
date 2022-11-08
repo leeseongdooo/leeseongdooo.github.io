@@ -1,20 +1,93 @@
 .InformationBox {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .MyInformationArea {
-    width: 50%;
+  // 내용물을 감싸는 div의 속성
+  .ContentArea {
     display: flex;
-    flex-direction: column;
+    width: 80%;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 300px;
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid black;
-    box-shadow: 10px 0px 10px 3px rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+
+    .CategoryText {
+      font-size: 100px;
+      color: transparent;
+      -webkit-text-stroke: 2px black;
+    }
+
+    .Introduce {
+      width: 65%;
+      .TopArea {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+          width: 75%;
+        }
+
+        img {
+          width: 150px;
+          height: 150px;
+          border: 1px solid black;
+        }
+      }
+
+      .BottomArea {
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          display: block;
+          margin: 5px 0px;
+          font-size: 14px;
+        }
+
+        span:first-child {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        // 학력사항
+        .EduLevel {
+          width: 50%;
+          margin: 10px;
+          margin-left: 0px;
+
+          ul {
+            border: 1px solid black;
+
+            li {
+              .SchoolName {
+                display: inline;
+                width: 200px;
+                border: 1px solid black;
+              }
+
+              // 입학-졸업년도
+              .Years {
+                width: 20%;
+                display: inline;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .AwardList {
+          width: 30%;
+          margin: 10px;
+          margin-left: 0px;
+        }
+
+        // 기술스택 div
+        .TechnicalStack {
+          width: 100%;
+        }
+      }
+    }
   }
 }
