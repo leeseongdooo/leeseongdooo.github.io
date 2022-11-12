@@ -1,0 +1,27 @@
+.ProjectBox {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ProjectArea {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+
+    // h2
+    .CategoryText {
+      font-size: 100px;
+      color: transparent;
+      -webkit-text-stroke: 2px black;
+    }
+
+    // 프로젝트 리스트 박스.
+    .ProjectListBox {
+      width: 65%;
+      border: 1px solid black;
+    }
+  }
+}

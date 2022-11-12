@@ -1,7 +1,51 @@
 import React from "react";
 import "../css/Information.scss";
 
+function SkillListForm({ name, img, BackColor }) {
+  return (
+    <div className="TechnicalListBox" style={{ backgroundColor: BackColor }}>
+      <img src={img} alt="HTML 아이콘" className="SkillImage"></img>
+      <span className="SkillText">{name}</span>
+    </div>
+  );
+}
+
 function Information() {
+  const MySkillInformation = [
+    {
+      id: 1,
+      name: "HTML",
+      img: "",
+      BackColor: "",
+    },
+    {
+      id: 2,
+      name: "CSS",
+      img: "",
+      BackColor: "royalblue",
+    },
+    {
+      id: 3,
+      name: "JS",
+      img: "",
+      BackColor: "",
+    },
+    {
+      id: 4,
+      name: "React",
+      img: "",
+      BackColor: "",
+    },
+    {
+      id: 5,
+      name: "SCSS",
+      img: "",
+      BackColor: "",
+    },
+  ];
+
+  console.log(MySkillInformation);
+
   return (
     <div className="InformationBox">
       <div className="ContentArea">
@@ -11,8 +55,8 @@ function Information() {
           <div className="TopArea">
             <img src="../img/Face.png" alt="" />
             <h2>
-              이이잉 아쌀라 말라이 꿈<br />
-              이이잉 아쌀라 말라이 꿈 <br />
+              안녕하세요 성장하는 개발자가 되고싶은
+              <br />
               프론트엔드 개발자 <br />
               이성훈 입니다.
             </h2>
@@ -41,13 +85,15 @@ function Information() {
               </div>
             </div>
 
+            <h4>Skills</h4>
             <div className="TechnicalStack">
-              <span>기술소개</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-              <span>SCSS</span>
-              <span>React</span>
+              {MySkillInformation.map((Info) => (
+                <SkillListForm
+                  name={Info.name}
+                  img={Info.img}
+                  BackColor={Info.BackColor}
+                />
+              ))}
             </div>
           </div>
         </div>
