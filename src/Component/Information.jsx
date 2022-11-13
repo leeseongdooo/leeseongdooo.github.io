@@ -50,16 +50,21 @@ function Information() {
     <div className="InformationBox">
       <div className="ContentArea">
         <h2 className="CategoryText">INFO</h2>
-
+        <h2>이성훈</h2>
         <div className="Introduce">
           <div className="TopArea">
-            <img src="../img/Face.png" alt="" />
-            <h2>
-              안녕하세요 성장하는 개발자가 되고싶은
-              <br />
-              프론트엔드 개발자 <br />
-              이성훈 입니다.
-            </h2>
+            <img
+              src="../images/Flower.jpeg"
+              alt=""
+              onerror="this.src='../img/Flower.jpeg'"
+            />
+            <div className="MyInformation">
+              <h2>생년월일: 1999.08.19</h2>
+              <h2>연락처: 010-6436-4239 </h2>
+              <h2>이메일: dltjdgns3z@naver.com</h2>
+              <h2>Blog: https://velog.io/@dltjdgns3z</h2>
+              <h2>GitHub: https://github.com/leeseongdooo</h2>
+            </div>
           </div>
 
           <div className="BottomArea">
