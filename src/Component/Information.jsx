@@ -7,21 +7,54 @@ import HtmlIcon from "../images/HtmlIcon.png";
 import JsIcon from "../images/JsIcon.png";
 import ReactIcon from "../images/ReactIcon.png";
 import SassIcon from "../images/SassIcon.png";
+import { useEffect } from "react";
 
-function SkillListForm({ name, img, BackColor }) {
-  const [NowColor, setNowColor] = useState();
+function SkillListForm({
+  id,
+  name,
+  img,
+  click,
+  AllInformation,
+  EditInformation,
+}) {
+  // clickCount
+  const [clickCount, setClickCount] = useState(0);
+  const [BgColor, setBgColor] = useState();
+  const [FontColor, setFontColor] = useState();
 
-  const BackColorChange = () => {
-    setNowColor(BackColor);
-  };
+  useEffect(() => {
+    if (clickCount % 2 === 1) {
+      // 다른 애들은 false로.
+      AllInformation.map((Info) => {
+        if (Info.name !== name) {
+          Info.click = false;
+        }
+      });
+      AllInformation[id - 1].click = true;
+      console.log(AllInformation);
+      EditInformation(AllInformation);
+    } else {
+      AllInformation[id - 1].click = false;
+      EditInformation(AllInformation);
+      console.log(AllInformation);
+      setBgColor("");
+      setFontColor("black");
+      setClickCount(0);
+    }
+
+    if (click === true) {
+      setBgColor("royalblue");
+      setFontColor("white");
+    }
+  }, [clickCount]);
 
   return (
     <div
       className="TechnicalListBox"
       onClick={() => {
-        BackColorChange();
+        setClickCount(clickCount + 1);
       }}
-      style={NowColor !== null ? { backgroundColor: BackColor } : {}}
+      style={{ backgroundColor: BgColor, color: FontColor }}
     >
       <img src={img} alt="HTML 아이콘" className="SkillImage"></img>
       <span>{name}</span>
@@ -30,66 +63,43 @@ function SkillListForm({ name, img, BackColor }) {
 }
 
 function Information() {
-  const MySkillInformation = [
+  const [MySkillInformation, setMySkillInformation] = useState([
     {
       id: 1,
       name: "HTML",
       img: HtmlIcon,
-      BackColor: "royalblue",
+      BackColor: "dimgray",
+      click: false,
     },
     {
       id: 2,
       name: "CSS",
       img: CssIcon,
-      BackColor: "",
+      BackColor: "dimgray",
+      click: false,
     },
     {
       id: 3,
       name: "JS",
       img: JsIcon,
-      BackColor: "",
+      BackColor: "dimgray",
+      click: false,
     },
     {
       id: 4,
       name: "React",
       img: ReactIcon,
-      BackColor: "",
+      BackColor: "dimgray",
+      click: false,
     },
     {
       id: 5,
       name: "SCSS",
       img: SassIcon,
-      BackColor: "",
+      BackColor: "dimgray",
+      click: false,
     },
-  ];
-
-  const competencies = [
-    {
-      id: 1,
-      name: "HTML",
-      point1: "HTML",
-    },
-    {
-      id: 2,
-      name: "CSS",
-      point1: "CSS",
-    },
-    {
-      id: 3,
-      name: "JS",
-      point1: "JS",
-    },
-    {
-      id: 4,
-      name: "React",
-      point1: "REACT",
-    },
-    {
-      id: 5,
-      name: "SCSS",
-      point1: "SCSS",
-    },
-  ];
+  ]);
 
   return (
     <div className="InformationBox">
@@ -160,9 +170,13 @@ function Information() {
               <div className="TechnicalStack">
                 {MySkillInformation.map((Info) => (
                   <SkillListForm
+                    key={Info.id}
+                    id={Info.id}
                     name={Info.name}
                     img={Info.img}
-                    BackColor={Info.BackColor}
+                    click={Info.click}
+                    AllInformation={MySkillInformation}
+                    EditInformation={setMySkillInformation}
                   />
                 ))}
               </div>
