@@ -13,38 +13,39 @@ function SkillListForm({
   id,
   name,
   img,
+  BackColor,
   click,
   AllInformation,
   EditInformation,
 }) {
   // clickCount
   const [clickCount, setClickCount] = useState(0);
-  const [BgColor, setBgColor] = useState();
-  const [FontColor, setFontColor] = useState();
-
+  const [BgColor, setBgColor] = useState("");
+  const [ClickList, setClickList] = useState([]);
   useEffect(() => {
     if (clickCount % 2 === 1) {
       // 다른 애들은 false로.
       AllInformation.map((Info) => {
         if (Info.name !== name) {
           Info.click = false;
+          Info.BackColor = "white";
+        } else {
+          Info.click = true;
         }
       });
-      AllInformation[id - 1].click = true;
-      console.log(AllInformation);
+
+      click = AllInformation[id - 1].click;
       EditInformation(AllInformation);
     } else {
       AllInformation[id - 1].click = false;
       EditInformation(AllInformation);
       console.log(AllInformation);
-      setBgColor("");
-      setFontColor("black");
-      setClickCount(0);
     }
 
     if (click === true) {
       setBgColor("royalblue");
-      setFontColor("white");
+    } else {
+      setBgColor("white");
     }
   }, [clickCount]);
 
@@ -54,7 +55,7 @@ function SkillListForm({
       onClick={() => {
         setClickCount(clickCount + 1);
       }}
-      style={{ backgroundColor: BgColor, color: FontColor }}
+      style={{ backgroundColor: BgColor, color: "black" }}
     >
       <img src={img} alt="HTML 아이콘" className="SkillImage"></img>
       <span>{name}</span>
@@ -68,35 +69,35 @@ function Information() {
       id: 1,
       name: "HTML",
       img: HtmlIcon,
-      BackColor: "dimgray",
+      BackColor: "",
       click: false,
     },
     {
       id: 2,
       name: "CSS",
       img: CssIcon,
-      BackColor: "dimgray",
+      BackColor: "",
       click: false,
     },
     {
       id: 3,
       name: "JS",
       img: JsIcon,
-      BackColor: "dimgray",
+      BackColor: "",
       click: false,
     },
     {
       id: 4,
       name: "React",
       img: ReactIcon,
-      BackColor: "dimgray",
+      BackColor: "",
       click: false,
     },
     {
       id: 5,
       name: "SCSS",
       img: SassIcon,
-      BackColor: "dimgray",
+      BackColor: "",
       click: false,
     },
   ]);
@@ -174,6 +175,7 @@ function Information() {
                     id={Info.id}
                     name={Info.name}
                     img={Info.img}
+                    BackColor={Info.BackColor}
                     click={Info.click}
                     AllInformation={MySkillInformation}
                     EditInformation={setMySkillInformation}
