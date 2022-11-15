@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Information.scss";
 import ProfileImage from "../images/ProfileImage.png";
 // 아이콘 이미지
@@ -9,16 +9,22 @@ import ReactIcon from "../images/ReactIcon.png";
 import SassIcon from "../images/SassIcon.png";
 
 function SkillListForm({ name, img, BackColor }) {
+  const [NowColor, setNowColor] = useState();
+
+  const BackColorChange = () => {
+    setNowColor(BackColor);
+  };
+
   return (
     <div
       className="TechnicalListBox"
       onClick={() => {
-        console.log(name);
+        BackColorChange();
       }}
-      style={{ backgroundColor: BackColor }}
+      style={NowColor !== null ? { backgroundColor: BackColor } : {}}
     >
       <img src={img} alt="HTML 아이콘" className="SkillImage"></img>
-      <span>50%</span>
+      <span>{name}</span>
     </div>
   );
 }
@@ -29,7 +35,7 @@ function Information() {
       id: 1,
       name: "HTML",
       img: HtmlIcon,
-      BackColor: "",
+      BackColor: "royalblue",
     },
     {
       id: 2,
@@ -54,6 +60,34 @@ function Information() {
       name: "SCSS",
       img: SassIcon,
       BackColor: "",
+    },
+  ];
+
+  const competencies = [
+    {
+      id: 1,
+      name: "HTML",
+      point1: "HTML",
+    },
+    {
+      id: 2,
+      name: "CSS",
+      point1: "CSS",
+    },
+    {
+      id: 3,
+      name: "JS",
+      point1: "JS",
+    },
+    {
+      id: 4,
+      name: "React",
+      point1: "REACT",
+    },
+    {
+      id: 5,
+      name: "SCSS",
+      point1: "SCSS",
     },
   ];
 
@@ -122,7 +156,7 @@ function Information() {
                 </div>
               </div>
 
-              <h4>Skills</h4>
+              <h4>사용해 본 기술</h4>
               <div className="TechnicalStack">
                 {MySkillInformation.map((Info) => (
                   <SkillListForm
@@ -137,7 +171,6 @@ function Information() {
 
           <div className="competencies">
             <h2 className="PointText">핵심 역량</h2>
-
             <h4>Skill 아이콘을 눌러서 확인할 수 있습니다.</h4>
           </div>
         </div>
