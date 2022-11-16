@@ -13,49 +13,19 @@ function SkillListForm({
   id,
   name,
   img,
-  BackColor,
-  click,
-  AllInformation,
-  EditInformation,
+  ChangeBackground
 }) {
   
-  const [NowColor, setNowColor] = useState(['', '', '', '', '']);
-
-  const ChangeBackground = () => {
-    AllInformation.map((Info) => {
-     if(Info.id === id)
-      {
-        if(Info.click === false)
-        {
-          Info.click = true;
-          Info.BackColor = "royalblue";
-          NowColor[id - 1] = Info.BackColor;
-          setNowColor(NowColor);
-        } else if(Info.click === true) {
-          Info.click = false;
-          Info.BackColor = "white";
-          NowColor[id - 1] = Info.BackColor;
-          setNowColor(NowColor);
-        }
-      } 
-     if(Info.id !== id){
-        Info.click = false;
-        Info.BackColor = "white";
-        setNowColor("white");
-      }
-    })
-    console.log(AllInformation);
-    EditInformation(AllInformation);
-    console.log(click)
-  }
+  const [BgColor, setBgColor] = useState("white");
 
   return (
     <div
       className="TechnicalListBox"
       onClick={() => {
-        ChangeBackground();
-      }}
-      style={{ backgroundColor: NowColor[id - 1], color: "black" }}
+        ChangeBackground(id, setBgColor);
+        console.log(BgColor);
+      }} 
+      style={{backgroundColor: BgColor}}
     >
       <img src={img} alt="HTML 아이콘" className="SkillImage"></img>
       <span>{name}</span>
@@ -69,38 +39,55 @@ function Information() {
       id: 1,
       name: "HTML",
       img: HtmlIcon,
-      BackColor: "",
+      BackColor: "white",
       click: false,
     },
     {
       id: 2,
       name: "CSS",
       img: CssIcon,
-      BackColor: "",
+      BackColor: "white",
       click: false,
     },
     {
       id: 3,
       name: "JS",
       img: JsIcon,
-      BackColor: "",
+      BackColor: "white",
       click: false,
     },
     {
       id: 4,
       name: "React",
       img: ReactIcon,
-      BackColor: "",
+      BackColor: "white",
       click: false,
     },
     {
       id: 5,
       name: "SCSS",
       img: SassIcon,
-      BackColor: "",
+      BackColor: "white",
       click: false,
     },
   ]);
+
+  const ChangeBackground = (id, setBg) => {
+    MySkillInformation.map((Info) => {
+      if(Info.id === id)
+      {
+        if(Info.click === false)
+        {
+          Info.click = true;
+          Info.BackColor = "royalblue";
+          setBg("royalblue");
+          console.log(MySkillInformation);
+        }
+      } else {
+        setBg("white")
+      }
+    })
+  }
 
   return (
     <div className="InformationBox">
@@ -175,10 +162,7 @@ function Information() {
                     id={Info.id}
                     name={Info.name}
                     img={Info.img}
-                    BackColor={Info.BackColor}
-                    click={Info.click}
-                    AllInformation={MySkillInformation}
-                    EditInformation={setMySkillInformation}
+                    ChangeBackground={ChangeBackground}
                   />
                 ))}
               </div>
