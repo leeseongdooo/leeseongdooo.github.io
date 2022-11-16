@@ -18,44 +18,44 @@ function SkillListForm({
   AllInformation,
   EditInformation,
 }) {
-  // clickCount
-  const [clickCount, setClickCount] = useState(0);
-  const [BgColor, setBgColor] = useState("");
-  const [ClickList, setClickList] = useState([]);
-  useEffect(() => {
-    if (clickCount % 2 === 1) {
-      // 다른 애들은 false로.
-      AllInformation.map((Info) => {
-        if (Info.name !== name) {
+  
+  const [NowColor, setNowColor] = useState(['', '', '', '', '']);
+
+  const ChangeBackground = () => {
+    AllInformation.map((Info) => {
+     if(Info.id === id)
+      {
+        if(Info.click === false)
+        {
+          Info.click = true;
+          Info.BackColor = "royalblue";
+          NowColor[id - 1] = Info.BackColor;
+          setNowColor(NowColor);
+        } else if(Info.click === true) {
           Info.click = false;
           Info.BackColor = "white";
-        } else {
-          Info.click = true;
+          NowColor[id - 1] = Info.BackColor;
+          setNowColor(NowColor);
         }
-      });
-
-      click = AllInformation[id - 1].click;
-      EditInformation(AllInformation);
-    } else {
-      AllInformation[id - 1].click = false;
-      EditInformation(AllInformation);
-      console.log(AllInformation);
-    }
-
-    if (click === true) {
-      setBgColor("royalblue");
-    } else {
-      setBgColor("white");
-    }
-  }, [clickCount]);
+      } 
+     if(Info.id !== id){
+        Info.click = false;
+        Info.BackColor = "white";
+        setNowColor("white");
+      }
+    })
+    console.log(AllInformation);
+    EditInformation(AllInformation);
+    console.log(click)
+  }
 
   return (
     <div
       className="TechnicalListBox"
       onClick={() => {
-        setClickCount(clickCount + 1);
+        ChangeBackground();
       }}
-      style={{ backgroundColor: BgColor, color: "black" }}
+      style={{ backgroundColor: NowColor[id - 1], color: "black" }}
     >
       <img src={img} alt="HTML 아이콘" className="SkillImage"></img>
       <span>{name}</span>
