@@ -9,7 +9,7 @@ function TestListDesign() {
       <div className="BottomArea">
         <div className="TextArea">
           <h3>TODOLIST</h3>
-          <span>투두리스트</span>
+          <span>개인프로젝트로 만든 TODOLIST입니다.</span>
         </div>
 
         <div className="ButtonBox">
