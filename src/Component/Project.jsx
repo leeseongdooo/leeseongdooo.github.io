@@ -5,25 +5,16 @@ import Test from "../images/TestFace.png";
 function TestListDesign() {
   return (
     <div className="ListForm">
-      <img src={Test} alt="" />
+      <img src={Test} alt="프로젝트 이미지 입니다." />
+      <div className="BottomArea">
+        <div className="TextArea">
+          <h3>TODOLIST</h3>
+          <span>투두리스트</span>
+        </div>
 
-      <div className="TextArea">
-        <h2>미니프로젝트</h2>
-        <div className="SmallText">
-          <span>
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-            미니프로젝트 입니다 미니프로젝트 입니다 미니프로젝트 입니다. <br />
-          </span>
-
-          <div>
-            <button>깃헙으로 고고</button>
-            <button>사이트로 고고</button>
-          </div>
+        <div className="ButtonBox">
+          <button>Git</button>
+          <button>사이트 이동</button>
         </div>
       </div>
     </div>
@@ -31,13 +22,6 @@ function TestListDesign() {
 }
 
 function Project() {
-  const ProjectInfo = [
-    {
-      id: 1,
-      name: "TODO LIST",
-    },
-  ];
-
   return (
     <div className="ProjectBox">
       <div className="ProjectArea">
