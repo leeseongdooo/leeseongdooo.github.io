@@ -1,23 +1,25 @@
 import React from "react";
 import "../css/Bottom.scss";
+import { AiFillMail, AiOutlineGithub } from "react-icons/ai";
 
 function Bottom() {
   return (
-    <div className="BottomArea">
+    <div className="BottomComponentArea">
       <div className="ListArea">
-        <div className="ListForm">
-          <h2>나의 깃헙으로</h2>
+        <h2>LINK</h2>
 
-          <div className="SpanArea">
-            <span>
-              합리적 수수료 <br /> 간편한 결제 경험으로 비용은 <br /> 절감하고
-              매출은 늘리세요.
-            </span>
-          </div>
+        <div className="IconBox">
+          <a href="mailto:dltjdgns3z@naver.com">
+            <AiFillMail className="Icons" />
+          </a>
 
-          <div>
-            <button>깃헙으로 이동하기</button>
-          </div>
+          <a href="https://github.com/leeseongdooo" target="_blank">
+            <AiOutlineGithub className="Icons" />
+          </a>
+
+          <a href="https://velog.io/@dltjdgns3z" target="_blank">
+            <span className="Velog">Velog</span>
+          </a>
         </div>
       </div>
     </div>
