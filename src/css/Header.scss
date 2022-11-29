@@ -1,3 +1,4 @@
+// PC version
 @media screen and (min-width: 768px) {
   .HeaderBox {
     position: fixed;
@@ -26,18 +27,26 @@
         cursor: pointer;
       }
     }
+    .MenuIcon {
+      display: none;
+    }
+    .SlideMenuBox {
+      display: none;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .HeaderBox {
+    position: fixed;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #202024;
-    border: 1px solid white;
+    justify-content: space-between;
     color: white;
+    background-color: #202024;
+    transition: 0.3s;
+    z-index: 99;
 
     // 사이트이름
     h2 {
@@ -47,18 +56,31 @@
 
     .MenuIcon {
       font-size: 28px;
+      color: white;
       margin-right: 10px;
       border: 1px solid black;
+    }
+
+    // Pc버전 MenuBox
+    .MenuBox {
+      display: none;
     }
 
     .SlideMenuBox {
       position: fixed;
       width: 100%;
       top: 0;
-      right: 50%;
+      left: 50%;
+      background-color: rgba(0, 0, 0, 0.3);
       min-height: 100vh;
-      color: black;
-      position: fixed;
+      transition: 0.3s;
+
+      .InsideArea {
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        color: black;
+      }
     }
   }
 }

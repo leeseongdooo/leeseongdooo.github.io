@@ -7,12 +7,14 @@ import InformationV2 from "./Component/InformationV2";
 
 function App() {
   return (
-    <div>
-      <MainPage />
-      <InformationV2 />
-      <Project />
-      <Bottom />
-    </div>
+    <>
+      <div className="ParentBox">
+        <MainPage />
+        <InformationV2 />
+        <Project />
+        <Bottom />
+      </div>
+    </>
   );
 }
 
