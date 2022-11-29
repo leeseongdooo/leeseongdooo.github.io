@@ -1,28 +1,64 @@
-.HeaderBox {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  padding: 0px 40px;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  background-color: #202024;
-  transition: 0.3s;
-  z-index: 99;
-  .MenuBox {
-    position: absolute;
-    right: 10%;
+@media screen and (min-width: 768px) {
+  .HeaderBox {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 0px 40px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #202024;
+    transition: 0.3s;
+    z-index: 99;
+    .MenuBox {
+      position: absolute;
+      right: 10%;
 
+      h2 {
+        cursor: pointer;
+      }
+
+      span {
+        margin: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 4px solid orange;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HeaderBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202024;
+    border: 1px solid white;
+    color: white;
+
+    // 사이트이름
     h2 {
-      cursor: pointer;
+      margin-left: 10px;
+      font-size: 20px;
     }
 
-    span {
-      margin: 15px;
-      font-size: 18px;
-      font-weight: 700;
-      border-bottom: 4px solid orange;
-      cursor: pointer;
+    .MenuIcon {
+      font-size: 28px;
+      margin-right: 10px;
+      border: 1px solid black;
+    }
+
+    .SlideMenuBox {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      right: 50%;
+      min-height: 100vh;
+      color: black;
+      position: fixed;
     }
   }
 }
