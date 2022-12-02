@@ -18,7 +18,7 @@ function Header({ value }) {
   const [MenuBarState, setMenuBarState] = useState(false);
 
   const CheckedMenu = {
-    left: "0",
+    left: "50%",
   };
 
   useEffect(() => {
@@ -36,6 +36,7 @@ function Header({ value }) {
         className="MenuIcon"
         onClick={() => {
           setMenuBarState(!MenuBarState);
+          console.log(MenuBarState)
         }}
       />
 
@@ -44,14 +45,23 @@ function Header({ value }) {
         style={MenuBarState === true ? CheckedMenu : null}
       >
         <div className="InsideArea">
-          <p>Home</p>
-          <p>Info</p>
-          <p>Project</p>
+          <div className="PaddingBox">
+            <BiMenu className="MenuIcon" 
+              onClick={() => {
+                setMenuBarState(!MenuBarState);
+              }} />
+            <div className="MenuTextBox">
+              <p>Home</p>
+              <p>Info</p>
+              <p>Project</p>
+            </div>
+            
+          </div>
         </div>
       </div>
-
+      
+      {/* PC버전 */}
       <div className="MenuBox">
-        <BiMenu className="MenuIcon" />
         <span>Home</span>
         <span>Info</span>
         <span>Project</span>

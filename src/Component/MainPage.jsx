@@ -25,8 +25,7 @@ function MainPage() {
      <Header value={scrollY}/>
       <div className="MainPageBox">
         <div className="TextBox">
-          <span>Seong Hoon</span>
-          <span>PORTFOLIO</span>
+          <span>Seong Hoon PORTFOLIO</span>
         </div>
 
         {/* GIt / Velog 사이트로 이동할 수 있는 버튼 div */}
