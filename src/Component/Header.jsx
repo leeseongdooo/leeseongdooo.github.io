@@ -30,7 +30,7 @@ function Header({ value }) {
       className="HeaderBox"
       style={value > 900 ? { backgroundColor: "white", color: "black" } : {}}
     >
-      <h2>LeeS Page</h2>
+      <h2>Portfolio</h2>
 
       <BiMenu
         className="MenuIcon"

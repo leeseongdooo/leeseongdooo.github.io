@@ -1,16 +1,64 @@
 .InformationBox {
-  position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: space-between;
-  .SideBar {
-    width: 20%;
-    border-right: 1px solid black;
-  }
-
-  .ViewBox {
-    width: 75%;
+  justify-content: center;
+  align-items: center;
+  
+  .InsideBox {
+    width: 90%;
+    height: 90vh;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .TextArea {
+      width: 100%;
+      border: 1px solid black;
+      text-align: center;
+
+      h2 {
+        font-size: 50px;
+      }
+    }
+
+    .MyInfoBox {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;      
+      justify-content: center;
+      img {
+      
+        max-width: 225px;
+        border-radius: 0%;
+      }
+    }
+
+    .ShapeBox {
+      margin-bottom: 20px;
+      width: 90%;
+      display: flex;      
+      justify-content: flex-start;
+     
+      
+      .ShapeForm {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid black;
+        background-color: antiquewhite;
+        width: 150px;
+        height: 150px;
+        margin: 0 20px;
+        transition: 0.3s;
+      }
+
+      .ShapeForm:hover {
+        width: 300px;
+       
+      }
+
+    
+    }
   }
 }
