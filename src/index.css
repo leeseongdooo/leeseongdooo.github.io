@@ -14,7 +14,11 @@ body p {
   font-weight: 700;
 }
 
+body span {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }

@@ -1,145 +1,280 @@
-.InformationBox {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
- 
-  .InsideBox {
-    width: 90%;
+// PC version
+@media screen and (min-width: 768px) {
+  .InformationBox {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-   
-    // 상단 텍스트
-    .MyInfoBox {
-      margin-top: 30px;
-      width: 100%;
-      display: flex;      
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-      
-      h1 {
-        width: 100%;
-        text-align: center;
-        font-size: 100px;
-        line-height: 0;
-        color: transparent;
-        -webkit-text-stroke: 2px black;
-      }
-
-      // 나를 소개하는 영역.
-      .TextBox {
-        margin-top: 10px;
-        width: 50%;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        
-        .Info {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          img {
-            transition: .3s;
-            background-color: royalblue;
-            border-radius: 100%;
-            max-width: 250px;
-            margin: 0px 20px 10px 0px;
-          }
-
-          img:hover {
-            background-color: rosybrown;
-          }
-
-          a {
-            display: block;
-            padding: 0px 20px;
-            margin: 10px 0px;
-            border-radius: 30px;
-            background-color: royalblue;
-            font-weight: 700;
-            color: white;
-            line-height: 50px;
-            width: 300px;
-            text-decoration: none;
-          }
-        }
-
-        // 소개멘트.
-        p {
-          text-align: center;
-          font-size: 16px;
-          line-height: 35px;
-          width: 100%;
-        }
-        
-        .AddInfo {
-          width: 70%;
-         
-          display: flex;
-          flex-wrap: wrap;
-          p {
-            width: 50%;
-            text-align: center;
-          }
-        }
-      }
-      
-    }
-
-    .BottomBox {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: 100%;
-      display: flex;      
-      justify-content: center;
-     
-      .SkillBox {
-        width: calc(50% + 30px);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        
-        .Introduce {
-          width: calc(50% - 40px);
-        
-          cursor: pointer;
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-          border-radius: 20px;
-          padding: 10px;     
-          margin: 10px 0px;
-          transition: 0.3s;
-  
-          h2 {
-            line-height: 0;
-            margin-bottom: 30px;
-          }
-
-          p {
-            font-size: 16px;
-            color: #6B7684;
-            line-height: 10px;
-          }
-        }
-        
-        .Introduce:first-child {
-          margin-left: 0px;
-        }
-      }
-      
-     
-
- 
-
     
+    .InsideBox {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      // 상단 텍스트
+      .MyInfoBox {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;      
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 100px;
+          line-height: 0;
+          color: transparent;
+          -webkit-text-stroke: 2px black;
+        }
+
+        // 나를 소개하는 영역.
+        .TextBox {
+          margin-top: 10px;
+          width: 50%;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          
+          .Info {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              transition: .3s;
+              background-color: royalblue;
+              border-radius: 100%;
+              max-width: 250px;
+              margin: 0px 20px 10px 0px;
+            }
+
+            img:hover {
+              background-color: rosybrown;
+            }
+
+            a {
+              display: block;
+              padding: 0px 20px;
+              margin: 10px 0px;
+              border-radius: 30px;
+              background-color: royalblue;
+              font-weight: 700;
+              color: white;
+              line-height: 50px;
+              width: 300px;
+              text-decoration: none;
+            }
+          }
+
+          // 소개멘트.
+          p {
+            text-align: center;
+            font-size: 16px;
+            line-height: 35px;
+            width: 100%;
+          }
+        }
+        
+      }
+
+      .BottomBox {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;      
+        justify-content: center;
+      
+        .SkillBox {
+          width: calc(50% + 30px);
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          
+          .Introduce {
+            width: calc(50% - 40px);
+          
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 10px;     
+            margin: 10px 0px;
+            transition: 0.3s;
+    
+            h2 {
+              line-height: 0;
+              margin-bottom: 30px;
+            }
+
+            p {
+              font-size: 16px;
+              color: #6B7684;
+              line-height: 10px;
+            }
+          }
+          
+          .Introduce:first-child {
+            margin-left: 0px;
+          }
+        }
+        
+      
+
+  
+
+      
+      }
+    }
+  }
+}
+
+
+// 모바일 버전
+@media screen and (max-width: 768px)
+{
+  .InformationBox {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .InsideBox {
+
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      // 상단 텍스트
+      .MyInfoBox {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;      
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 100px;
+          line-height: 0;
+          color: transparent;
+          -webkit-text-stroke: 2px black;
+        }
+
+        // 나를 소개하는 영역.
+        .TextBox {
+          margin-top: 10px;
+          width: calc(100% - 30px);
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          
+          .Info {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              transition: .3s;
+              background-color: royalblue;
+              border-radius: 10px;
+              max-width: 125px;
+              margin: 0px 20px 10px 0px;
+            }
+
+            img:hover {
+              background-color: rosybrown;
+            }
+
+            a {
+              font-size: 14px;
+              display: block;
+              padding: 2.5px 10px;
+              margin: 10px 0px;
+              border-radius: 30px;
+              background-color: royalblue;
+              font-weight: 700;
+              color: white;
+              line-height: 30px;
+              width: 90%;
+              
+              text-decoration: none;
+            }
+          }
+
+          // 소개멘트.
+          p {
+           
+            text-align: center;
+            font-size: 14px;
+            line-height: 35px;
+            width: 100%;
+          }
+        }
+        
+      }
+
+      .BottomBox {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;      
+        justify-content: center;
+      
+        .SkillBox {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          
+          .Introduce {
+            width: calc(50% - 40px);
+          
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 10px;     
+            margin: 10px 0px;
+            transition: 0.3s;
+    
+            h2 {
+              line-height: 0;
+              margin-bottom: 30px;
+            }
+
+            p {
+              font-size: 14px;
+              color: #6B7684;
+              
+            }
+          }
+          
+          .Introduce:first-child {
+            margin-left: 0px;
+          }
+        }
+        
+      
+
+  
+
+      
+      }
     }
   }
 }
