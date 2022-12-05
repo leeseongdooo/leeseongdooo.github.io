@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/InfoCSS.scss";
-import ExImage from "../images/ExImage.jpeg";
+import ExImage from "../images/TestFace.png";
 import ProfileImage from "../images/ProfileImage.png";
 function InformationV2() {
 
@@ -44,9 +44,8 @@ function InformationV2() {
 
                 <div className="Introduce">
                     <h2>CSS</h2>
-                    <span>
-                      리액트 사용경험
-                    </span>
+                    <p>반응형 웹 사이트 제작 경험이 있습니다.</p>
+                    <p>SCSS 사용 경험이 있습니다.</p>
                 </div>
 
                 <div className="Introduce">
@@ -59,7 +58,7 @@ function InformationV2() {
                 <div className="Introduce">
                     <h2>React</h2>
                     <span>
-                      리액트 사용경험
+                      React를 사용한 프로젝트 경험이 있습니다.
                     </span>
                 </div>
 
