@@ -29,17 +29,7 @@ function MainPage() {
         </div>
 
         {/* GIt / Velog 사이트로 이동할 수 있는 버튼 div */}
-        <div className="InfoButtonBox">
-          <a href="https://github.com/leeseongdooo/Portfolio" className="Button" target="_blank">
-            <AiFillGithub className="Icons" />
-            <h4>Git</h4>
-          </a>
-
-          <a href="https://velog.io/@dltjdgns3z" className="Button" target="_blank">
-            <h4>Velog</h4>
-          </a>
-        </div>
-
+     
         <div className="IconBox">
           <TfiArrowCircleDown className="Icon" onClick={()=>{window.scrollTo({top: 970, behavior: "smooth" });}} />
         </div>
