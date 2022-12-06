@@ -160,21 +160,17 @@
 // Mobile ver
 @media screen and (max-width: 768px) {
 .ProjectBox {
-  position: relative;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: whitesmoke;
   
   .ProjectArea {
-    display: flex;
     width: 90%;
 
     // h2
     .CategoryText {
-      position: absolute;
-      top: -50px;
-      font-size: 60px;
+      text-align: center;
+      font-size: 100px;
+    
       color: transparent;
       -webkit-text-stroke: 2px black;
     }

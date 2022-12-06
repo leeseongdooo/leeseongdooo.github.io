@@ -89,7 +89,7 @@
     align-items: flex-end;
     // 텍스트 박스
     .TextBox {
-      margin: 0px 0px 140px 20px;
+      margin: 0px 0px 70px 15px;
       span {
         display: block;
         font-size: 48px;
@@ -101,49 +101,10 @@
       }
     }
   
-    // Git / Velog 사이트로 이동할 수 있는 버튼 div
-    .InfoButtonBox {
-      position: absolute;
-      left: 20px;
-      bottom: 70px;
-      display: flex;
-  
-      .Button {
-        margin: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(49, 64, 82);
-        padding: 10px;
-        width: 130px;
-        height: 30px;
-        border-radius: 10px;
-        color: white;
-        text-decoration: none;
-        transition: 0.3s;
-  
-        .Icons {
-          font-size: 24px;
-          margin-right: 5px;
-        }
-  
-        h4 {
-          font-size: 20px;
-        }
-      }
-  
-      .Button:nth-child(2) {
-        background-color: rgb(53, 223, 166);
-      }
-  
-      .Button:hover {
-        box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.3);
-      }
-    }
-  
+   
     .IconBox {
       position: absolute;
-      left: 50%;
+      left: 48%;
       bottom: 3%;
       .Icon {
         font-size: 2em;
