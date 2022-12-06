@@ -20,46 +20,6 @@
     }
   }
 
-  // Git / Velog 사이트로 이동할 수 있는 버튼 div
-  .InfoButtonBox {
-    position: absolute;
-    left: 80px;
-    bottom: 100px;
-    display: flex;
-
-    .Button {
-      margin: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(49, 64, 82);
-      padding: 10px;
-      width: 130px;
-      height: 30px;
-      border-radius: 10px;
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-
-      .Icons {
-        font-size: 24px;
-        margin-right: 5px;
-      }
-
-      h4 {
-        font-size: 20px;
-      }
-    }
-
-    .Button:nth-child(2) {
-      background-color: rgb(53, 223, 166);
-    }
-
-    .Button:hover {
-      box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.3);
-    }
-  }
-
   .IconBox {
     position: absolute;
     left: 50%;
@@ -71,6 +31,19 @@
       animation: Blink 2s infinite;
     }
   }
+
+  .Beha {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+    border: none;
+    font-weight: 700;
+    transition: all 0.3s;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
 }
 
 @keyframes Blink {

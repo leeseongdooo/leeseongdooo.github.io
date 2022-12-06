@@ -20,6 +20,8 @@ function MainPage() {
     }
   });
 
+  
+
   return (
     <>
      <Header value={scrollY}/>
@@ -33,6 +35,8 @@ function MainPage() {
         <div className="IconBox">
           <TfiArrowCircleDown className="Icon" onClick={()=>{window.scrollTo({top: 970, behavior: "smooth" });}} />
         </div>
+        
+        <button className="Beha" style={scrollY > 100 ? {visibility: "visible", width: "50px", height: "50px"} : {visibility: "hidden", width: "0px", height: "0px"}}onClick={() => {window.scrollTo({top:0,  behavior: "smooth" })}}>UP</button>
       </div>
     </>
   );
