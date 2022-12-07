@@ -51,9 +51,9 @@ function Header({ value }) {
                 setMenuBarState(!MenuBarState);
               }} />
             <div className="MenuTextBox">
-              <p>Home</p>
-              <p>Info</p>
-              <p>Project</p>
+              <p onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}}>Home</p>
+              <p onClick={() => {window.scrollTo({top: 850, behavior: "smooth" })}}>Info</p>
+              <p onClick={() => {window.scrollTo({top: 2100, behavior: "smooth" })}}>Project</p>
             </div>
             
           </div>
@@ -62,9 +62,9 @@ function Header({ value }) {
       
       {/* PC버전 */}
       <div className="MenuBox">
-        <span>Home</span>
-        <span>Info</span>
-        <span>Project</span>
+        <span onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}}>Home</span>
+        <span onClick={() => {window.scrollTo({top: 970, behavior: "smooth" })}}>Info</span>
+        <span onClick={() => {window.scrollTo({top: 1950, behavior: "smooth"})}}>Project</span>
       </div>
     </div>
   );

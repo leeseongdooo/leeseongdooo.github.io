@@ -47,7 +47,7 @@ function TestListDesign({
         </div>
 
         <div className="LinkButtonBox">
-          <a href="">
+          <a href={GitLink} target="_blank">
             <button>GitHub로 이동</button>
           </a>
 
