@@ -34,32 +34,42 @@ function InformationV2() {
              
             </div>
             
+            {/* <div className="MiddleBox">
+              <div className="Education">
+                  <p>2022 영진전문대학 졸업예정</p>
+              </div>
+            </div> */}
             
             <div className="BottomBox">
               
                <div className="SkillBox">
                 <div className="Introduce">
-                    <h2>HTML</h2>
-                    <p>웹 표준 기반 태그</p>
-                    <p></p>
-                </div>
-
-                <div className="Introduce">
-                    <h2>CSS</h2>
-                    <p>반응형 웹 사이트 제작 경험이 있습니다.</p>
+                    <h2>HTML / CSS</h2>
+                    <p>웹 표준 기반 태그 사용</p>
+                    <p>미디어 쿼리를 사용한 반응형 웹 사이트 제작 경험이 있습니다.</p>
                     <p>SCSS 사용 경험이 있습니다.</p>
                 </div>
 
                 <div className="Introduce">
                     <h2>JS</h2>
-                    <p>ES6+ 문법을 사용 </p>
-                    
+                    <p>JS를 사용한 프로젝트 경험이 있습니다.</p>
+                    <p>ES6+ 문법을 사용합니다. </p>
+                    <p>DOM 제어</p>
+                   
                 </div>
 
                 <div className="Introduce">
                     <h2>React</h2>
-                    <p>React Hooks 사용</p>
-                    <p>Context API 사용</p>
+                    <p>React를 활용한 프로젝트 경험이 있습니다.</p>
+                    <p>React Hooks 사용 경험이 있습니다.</p>
+                    <p>Context Api 사용 경험이 있습니다.</p>
+                    
+                </div>
+
+                <div className="Introduce">
+                    <h2>Git</h2>
+                    <p>Git을 이용하여 협업이 가능합니다.</p>
+                
                 </div>
 
                </div>
