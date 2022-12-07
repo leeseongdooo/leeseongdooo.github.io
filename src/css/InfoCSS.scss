@@ -48,6 +48,49 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
+
+            .ProfileBox {
+              cursor: pointer;
+              min-width: 200px;
+              min-height: 200px;
+              border-radius: 100%;
+              background-color: royalblue;
+              background-image: url('../images/TestFace.png');
+              background-size: cover;
+              margin: 0px 20px 10px 0px;
+              transition: 0.3s;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .MyInformation {
+                opacity: 0;
+                transition: 0.3s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                width: 100%;
+                height: 200px;
+                border-radius: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+                p {
+                  color: white;
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+              }
+            }
+            
+            .ProfileBox:hover {
+              .MyInformation {
+                opacity: 1;
+              }
+            }            
+
             img {
               transition: .3s;
               background-color: royalblue;
@@ -188,7 +231,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            img {
+            .ProfileBox {
+              background-image: url('');
               transition: .3s;
               background-color: royalblue;
               border-radius: 10px;

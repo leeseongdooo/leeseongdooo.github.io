@@ -36,7 +36,7 @@ function MainPage() {
           <TfiArrowCircleDown className="Icon" onClick={()=>{window.scrollTo({top: 970, behavior: "smooth" });}} />
         </div>
         
-        <button className="Beha" style={scrollY > 100 ? {visibility: "visible", width: "50px", height: "50px"} : {visibility: "hidden", width: "0px", height: "0px"}}onClick={() => {window.scrollTo({top:0,  behavior: "smooth" })}}>UP</button>
+        <button className="UpButton" style={scrollY > 100 ? {visibility: "visible", width: "50px", height: "50px"} : {visibility: "hidden", width: "0px", height: "0px", fontSize: "0px"}}onClick={() => {window.scrollTo({top:0,  behavior: "smooth", fontsize: "0px" })}}>UP</button>
       </div>
     </>
   );

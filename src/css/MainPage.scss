@@ -32,7 +32,7 @@
     }
   }
 
-  .Beha {
+  .UpButton {
     position: fixed;
     right: 30px;
     bottom: 30px;
@@ -61,6 +61,7 @@
     display: flex;
     align-items: flex-end;
     // 텍스트 박스
+    
     .TextBox {
       margin: 0px 0px 70px 15px;
       span {
@@ -74,7 +75,6 @@
       }
     }
   
-   
     .IconBox {
       position: absolute;
       left: 48%;
@@ -85,6 +85,20 @@
         cursor: pointer;
         animation: Blink 2s infinite;
       }
+    }
+
+    .UpButton {
+      border: 1px solid black;
+      z-index: 100;
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      border-radius: 100%;
+      border: none;
+      font-weight: 700;
+      transition: all 0.3s;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
     }
   }
   

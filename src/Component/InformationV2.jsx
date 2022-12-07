@@ -15,7 +15,14 @@ function InformationV2() {
 
             <div className="TextBox">
               <div className="Info">
-                    <img src={ExImage} alt="" />
+                    {/* <img src={ExImage} alt="" /> */}
+                    <div className="ProfileBox">
+                      <div className="MyInformation">
+                          <p>이름 : 이성훈</p>
+                          <p>나이 : 24</p>
+                          <p>영진전문대학(졸업예정)</p>
+                      </div>
+                    </div>
                     {/* 연락처 */}
                     <div>
                        <a href="mailto:dltjdgns3z@naver.com">dltjdgns3z@naver.com</a>
